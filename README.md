@@ -1,4 +1,3 @@
-# Deep_learning_3rd_HW.
 ## Character-Level Language Modeling with RNN and LSTM
 
 ### Introduction
@@ -49,16 +48,64 @@ model.py 파일에서 Vanilla RNN과 LSTM 모델을 구현했습니다.
 다양한 시드 문자와 온도(Temperature) 값을 사용하여 생성 결과를 비교했습니다.
 온도 값이 낮을수록 모델은 더 확실한 예측을 하게 되어 일관성 있는 문자열을 생성하지만, 다양성이 떨어질 수 있습니다. 
 반면에 온도 값이 높을수록 모델의 예측 분포가 평평해져서 다양한 문자열을 생성할 수 있지만, 문맥과 맞지 않는 문자열이 생성될 가능성도 높아집니다.
-실험 결과, 0.4에서 0.7 사이의 온도 값이 적절한 균형을 보여주었습니다. 
 이 범위의 온도에서 모델은 문맥에 맞는 그럴듯한 문자열을 생성하면서도 어느 정도의 다양성을 유지할 수 있었습니다.
 
 - $T < 1$이면 높은 확률을 가진 후보가 더 강조되어 선택됩니다.   
 - $T > 1$이면 확률분포가 평평해져서 다양한 후보가 선택될 수 있습니다.   
 - $T = 1$일 때는 원래의 확률분포와 동일합니다.   
 
-RNN 모델 생성 결과
-TemperatureSample 1Sample 2Sample 3Sample 4Sample 50.5KINGHAM:<br><br>They are spoke the people,<br><br>And so father be the like and scorn be presently,<br><br>And the gods<br><br>InBe strong.<br><br>SICINIUS:<br><br>I have not so do you the people, the wind make the much my soul's heart and leaTER:<br><br>Grandam?<br><br>GLOUCESTER:<br><br>What he comes the city, poor of the country's service that for me.<br><br>CORIOLCORIOLANUS:<br><br>I have here, they have been service.<br><br>COMINIUS:<br><br>He hath best his desire of the common toQUEEN ELIZABETH:<br><br>KING EDWARD IV:<br><br>Did the other.<br><br>COMINIUS:<br><br>The store<br><br>The country's death,<br><br>And will w1.0KINGS:<br><br>Go, good fellow liked the earth, gave them, what down, by too from e's blood children.<br><br>QUEENBRUTUS:<br><br>Wife and the like and and molter pacruse, company lives country?<br><br>CORIOLANUS:<br><br>I noble with beThis wit we have at my noble end on his shoot to report upon once strwing to her eyes word,<br><br>And attenCKINGHAM:<br><br>You content; I'll prismes lies,<br><br>Long lord.<br><br>BRUTUS:<br><br>Beggars,<br><br>I sworn did plainate;<br><br>May showQUEEN ELIZABETH:<br><br>Catings and they.<br><br>HASTINGS:<br><br>I repleading your grave my part my country's fool;<br><br>For2.0KING-:<br><br>Tod: 'gg.<br><br>AUELBRIDCASY frCY ANNE:<br><br>Y<br><br>Gran keekspreporcud's, dequieriedd Witiua, legst.<br><br>Whyn oqBRAKENBURY if I liachoce;<br><br>ns:<br><br>Ko weptunof Glow<br><br>to maDe--wrup, fill'd Jazgch!s:<br><br>re'ent: you,<br><br>Or wavedT.<br><br>BUCKINGHAMF po most Margatipulu,.<br><br>Menter<br><br>The furrame us!<br><br>Thip dewdnnmit Mayer. Trad-affecliag's;COMII:<br><br>EInetfil usgaad<br><br>I'hiw,f ryled, let<br><br>Grsain.<br><br>Dids'd it.<br><br>LEED: Thunky<br><br>brar vly; ric<br><br>ars' of thanQUEEk they life Gthus!<br><br>Did!;<br><br>In liatldouse Costedureaus,<br><br>Tdercion o' their? mine. Live, aigdry.<br><br>But,LSTM 모델 생성 결과
-TemperatureSample 1Sample 2Sample 3Sample 4Sample 50.5K:<br><br>My lord?<br><br>GLOUCESTER:<br><br>Then be your brother stood their bed, the moon of those that have fought;<br><br>WaBut then we do repent me to my cousin Buckingham,<br><br>That in the common proud advised of this piecin canThat we will see them.<br><br>BRUTUS:<br><br>Say, then, we will to the Tower,<br><br>And save your wife.<br><br>CORIOLANUS:<br><br>WhoCKINGHAM:<br><br>Then know, my lord?<br><br>GLOUCESTER:<br><br>My lord, this princely selves, the senators of the seat anQUEEN ELIZABETH:<br><br>It is a man in his soul.<br><br>MARCIUS:<br><br>Masters on the mother of the wars.<br><br>VALERIA:<br><br>Not1.0K:<br><br>'Tis denied must I have been mine own princely point to do<br><br>But interchied in my stirrup,' to him mBUCKINGHAM:<br><br>Why, 'tis odds, for his fen of them.<br><br>Both Turses:<br><br>Must a twist thou of my brother? who'sThat he's coming: he care these feel; and will<br><br>And yet to send a Coriolanus. Let most thou?<br><br>Third SeCORIOLANUS:<br><br>Welcome I not? the tribunes<br><br>And pannot--begenter'd in the streets,<br><br>Lest I see him, untilQUEEN MARGARET:<br><br>Foul devil that I reprehended?<br><br>MENENIUS:<br><br>You have, my lord.<br><br>GLOUCESTER:<br><br>Say, then:2.0KYIR: O God conscartful one,<br><br>if it bear endure.<br><br>Call, I'll non: go and peying all my hose. Now you<br><br>meBktton on, nay o'ersheelire: turn.s--<br><br>I I must have A did;'<br><br>Are oten.<br><br>Upon you: but Clarence doth meTH:<br><br>Vow, Audidiunims?<br><br>COMINIUS:<br><br>Ah husbid melts welly might.<br><br>Heath, harm!<br><br>Aed, that he God alias wilCMRICHARD IV:<br><br>MARCIUS:<br><br>In my lord atdette<br><br>I'll wringe a-kass of his,<br><br>Nor what as huslded; if is citiQUEEN ELIZABETH:<br><br>Why, we shall not?<br><br>hy willingnens!<br><br>If phese to my quilk, lister<br><br>You Jove of hang-be
+## RNN 모델 생성 결과
+
+| Temperature: 0.5 | |
+|------------------|---|
+| **Sample 1**     | KINGHAM:<br>They are spoke the people,<br>And so father be the like and scorn be presently,<br>And the gods<br>In |
+| **Sample 2**     | Be strong.<br><br>SICINIUS:<br>I have not so do you the people, the wind make the much my soul's heart and lea |
+| **Sample 3**     | TER:<br>Grandam?<br><br>GLOUCESTER:<br>What he comes the city, poor of the country's service that for me.<br><br>CORIOL |
+| **Sample 4**     | CORIOLANUS:<br>I have here, they have been service.<br><br>COMINIUS:<br>He hath best his desire of the common to |
+| **Sample 5**     | QUEEN ELIZABETH:<br><br>KING EDWARD IV:<br>Did the other.<br><br>COMINIUS:<br>The store<br>The country's death,<br>And will w |
+
+| Temperature: 1 | |
+|----------------|---|
+| **Sample 1**   | KINGS:<br>Go, good fellow liked the earth, gave them, what down, by too from e's blood children.<br><br>QUEEN |
+| **Sample 2**   | BRUTUS:<br>Wife and the like and and molter pacruse, company lives country?<br><br>CORIOLANUS:<br>I noble with be |
+| **Sample 3**   | This wit we have at my noble end on his shoot to report upon once strwing to her eyes word,<br>And atten |
+| **Sample 4**   | CKINGHAM:<br>You content; I'll prismes lies,<br>Long lord.<br><br>BRUTUS:<br>Beggars,<br>I sworn did plainate;<br>May show |
+| **Sample 5**   | QUEEN ELIZABETH:<br>Catings and they.<br><br>HASTINGS:<br>I repleading your grave my part my country's fool;<br>For |
+
+| Temperature: 2 | |
+|----------------|---|
+| **Sample 1**   | KING-:<br>Tod: 'gg.<br><br>AUELBRIDCASY frCY ANNE:<br>Y<br>Gran keekspreporcud's, dequieriedd Witiua, legst.<br>Whyn oq |
+| **Sample 2**   | BRAKENBURY if I liachoce;<br>ns:<br>Ko weptunof Glow<br>to maDe--wrup, fill'd Jazgch!s:<br>re'ent: you,<br>Or waved |
+| **Sample 3**   | T.<br><br>BUCKINGHAMF po most Margatipulu,.<br>Menter<br>The furrame us!<br><br>Thip dewdnnmit Mayer. Trad-affecliag's; |
+| **Sample 4**   | COMII:<br>EInetfil usgaad<br>I'hiw,f ryled, let<br>Grsain.<br>Dids'd it.<br><br>LEED: Thunky<br>brar vly; ric<br>ars' of than |
+| **Sample 5**   | QUEEk they life Gthus!<br><br>Did!;<br>In liatldouse Costedureaus,<br>Tdercion o' their? mine. Live, aigdry.<br>But, |
+
+## LSTM 모델 생성 결과
+
+| Temperature: 0.5 | |
+|------------------|---|
+| **Sample 1**     | K:<br>My lord?<br><br>GLOUCESTER:<br>Then be your brother stood their bed, the moon of those that have fought;<br>Wa |
+| **Sample 2**     | But then we do repent me to my cousin Buckingham,<br>That in the common proud advised of this piecin can |
+| **Sample 3**     | That we will see them.<br><br>BRUTUS:<br>Say, then, we will to the Tower,<br>And save your wife.<br><br>CORIOLANUS:<br>Who |
+| **Sample 4**     | CKINGHAM:<br>Then know, my lord?<br><br>GLOUCESTER:<br>My lord, this princely selves, the senators of the seat an |
+| **Sample 5**     | QUEEN ELIZABETH:<br>It is a man in his soul.<br><br>MARCIUS:<br>Masters on the mother of the wars.<br><br>VALERIA:<br>Not |
+
+| Temperature: 1 | |
+|----------------|---|
+| **Sample 1**   | K:<br>'Tis denied must I have been mine own princely point to do<br>But interchied in my stirrup,' to him m |
+| **Sample 2**   | BUCKINGHAM:<br>Why, 'tis odds, for his fen of them.<br><br>Both Turses:<br>Must a twist thou of my brother? who's |
+| **Sample 3**   | That he's coming: he care these feel; and will<br>And yet to send a Coriolanus. Let most thou?<br><br>Third Se |
+| **Sample 4**   | CORIOLANUS:<br>Welcome I not? the tribunes<br>And pannot--begenter'd in the streets,<br>Lest I see him, until |
+| **Sample 5**   | QUEEN MARGARET:<br>Foul devil that I reprehended?<br><br>MENENIUS:<br>You have, my lord.<br><br>GLOUCESTER:<br>Say, then: |
+
+| Temperature: 2 | |
+|----------------|---|
+| **Sample 1**   | KYIR: O God conscartful one,<br>if it bear endure.<br>Call, I'll non: go and peying all my hose. Now you<br>me |
+| **Sample 2**   | Bktton on, nay o'ersheelire: turn.s--<br>I I must have A did;'<br>Are oten.<br>Upon you: but Clarence doth me |
+| **Sample 3**   | TH:<br>Vow, Audidiunims?<br><br>COMINIUS:<br>Ah husbid melts welly might.<br>Heath, harm!<br><br>Aed, that he God alias wil |
+| **Sample 4**   | CMRICHARD IV:<br><br>MARCIUS:<br>In my lord atdette<br>I'll wringe a-kass of his,<br>Nor what as huslded; if is citi |
+| **Sample 5**   | QUEEN ELIZABETH:<br>Why, we shall not?<br> hy willingnens!<br>If phese to my quilk, lister<br>You Jove of hang-be |
+
 
 실험 결과를 살펴보면 다음과 같은 특징을 관찰할 수 있습니다.
 
