@@ -37,7 +37,7 @@ model.py 파일에서 Vanilla RNN과 LSTM 모델을 구현했습니다.
 
 ### Results
 
-####Validation Loss
+1. Validation Loss
 아래 그래프는 Vanilla RNN과 LSTM 모델의 훈련 손실과 검증 손실을 보여줍니다.
 
 그래프에서 볼 수 있듯이, LSTM 모델이 Vanilla RNN 모델보다 더 낮은 검증 손실을 달성했습니다. 
