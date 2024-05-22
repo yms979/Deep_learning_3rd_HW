@@ -40,6 +40,9 @@ model.py 파일에서 Vanilla RNN과 LSTM 모델을 구현했습니다.
 1. Validation Loss
 아래 그래프는 Vanilla RNN과 LSTM 모델의 훈련 손실과 검증 손실을 보여줍니다.
 
+![Figure_1](https://github.com/yms979/Deep_learning_3rd_HW/assets/45974948/77ed98ee-ca75-44ed-a0ac-7e35d5daf117)
+
+
 그래프에서 볼 수 있듯이, LSTM 모델이 Vanilla RNN 모델보다 더 낮은 검증 손실을 달성했습니다. 
 이는 LSTM의 게이트 메커니즘이 장기 의존성을 더 잘 포착할 수 있기 때문입니다.
 
